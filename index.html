@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OVIA FOODS | Premium Nutty Granola</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            brown: '#3D2314',
+                            darkbrown: '#24140B',
+                            gold: '#D4A359',
+                            lightgold: '#F4E8D3',
+                            green: '#2E6B34',
+                            lightgreen: '#E8F3E9',
+                            cream: '#FDFBF7',
+                            accentRed: '#E63946',
+                            accentYellow: '#FFB703',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(253, 251, 247, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 163, 89, 0.2);
+        }
+        .grain-bg {
+            background-color: #FDFBF7;
+            background-image: radial-gradient(#3D2314 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+            background-opacity: 0.03;
+        }
+        .custom-shadow {
+            box-shadow: 0 20px 40px -15px rgba(61, 35, 20, 0.12);
+        }
+    </style>
+</head>
+<body class="bg-brand-cream text-brand-brown font-sans antialiased overflow-x-hidden selection:bg-brand-gold selection:text-white">
+
+    <header class="sticky top-0 z-50 bg-brand-cream/90 backdrop-blur-md border-b border-brand-gold/20 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 rounded-full bg-brand-green flex items-center justify-center text-brand-cream shadow-md group-hover:scale-105 transition-transform">
+                        <i data-lucide="leaf" class="w-6 h-6 text-brand-gold"></i>
+                    </div>
+                    <div>
+                        <span class="font-serif text-2xl font-bold tracking-tight text-brand-brown block leading-none">OVIA</span>
+                        <span class="text-xs font-semibold tracking-widest text-brand-green uppercase">FOODS</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-8 font-medium text-sm text-brand-brown/80">
+                    <a href="#home" class="hover:text-brand-green transition-colors">Home</a>
+                    <a href="#ingredients" class="hover:text-brand-green transition-colors">12 Ingredients</a>
+                    <a href="#benefits" class="hover:text-brand-green transition-colors">Why Choose Us</a>
+                    <a href="#order" class="hover:text-brand-green transition-colors">Order Packs</a>
+                    <a href="#contact" class="hover:text-brand-green transition-colors">Contact</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <a href="https://wa.me/2349068925822?text=Hello%20OVIA%20FOODS,%20I%20would%20like%20to%20order%20Nutty%20Granola!" target="_blank" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-brand-green text-white font-medium text-sm hover:bg-brand-brown shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5">
+                        <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                        <span>Order via WhatsApp</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg text-brand-brown hover:bg-brand-lightgold/50 focus:outline-none">
+                    <i data-lucide="menu" id="menuIcon" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-brand-cream border-b border-brand-gold/20 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="mobile-link block py-2 px-3 rounded-lg hover:bg-brand-lightgold/40 text-base font-medium">Home</a>
+            <a href="#ingredients" class="mobile-link block py-2 px-3 rounded-lg hover:bg-brand-lightgold/40 text-base font-medium">12 Wholesome Ingredients</a>
+            <a href="#benefits" class="mobile-link block py-2 px-3 rounded-lg hover:bg-brand-lightgold/40 text-base font-medium">Nutritional Benefits</a>
+            <a href="#order" class="mobile-link block py-2 px-3 rounded-lg hover:bg-brand-lightgold/40 text-base font-medium">Order Packs</a>
+            <a href="#contact" class="mobile-link block py-2 px-3 rounded-lg hover:bg-brand-lightgold/40 text-base font-medium">Contact Details</a>
+            <a href="https://wa.me/2349068925822" target="_blank" class="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-brand-green text-white font-semibold">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+                <span>Direct WhatsApp Order</span>
+            </a>
+        </div>
+    </header>
+
+    <section id="home" class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden grain-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-lightgreen text-brand-green font-semibold text-xs tracking-wide uppercase border border-brand-green/20">
+                        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-brand-green"></i>
+                        <span>100% Handcrafted & Natural Energy</span>
+                    </div>
+                    
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-brown leading-tight">
+                        Pure Energy. <br>
+                        <span class="text-brand-green italic font-normal">100% Natural</span> Wholesomeness.
+                    </h1>
+                    
+                    <p class="text-lg text-brand-brown/80 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Fuel your body with <strong>OVIA FOODS Nutty Granola</strong>. A power-packed crunch crafted from premium <strong>Rolled oats</strong>, toasted nuts, coconut flakes, 4 superfood seeds, sweet dried fruits, and pure honey.
+                    </p>
+
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#order" class="w-full sm:w-auto px-8 py-4 rounded-full bg-brand-brown text-brand-cream font-semibold shadow-lg hover:bg-brand-green transition-all transform hover:-translate-y-1 flex items-center justify-center gap-3">
+                            <span>Order Your Pack</span>
+                            <i data-lucide="arrow-right" class="w-5 h-5 text-brand-gold"></i>
+                        </a>
+                        <a href="#ingredients" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white border border-brand-gold/40 text-brand-brown font-semibold shadow-sm hover:bg-brand-lightgold/30 transition-all flex items-center justify-center gap-2">
+                            <i data-lucide="eye" class="w-4 h-4 text-brand-green"></i>
+                            <span>Explore 12 Ingredients</span>
+                        </a>
+                    </div>
+
+                    <!-- Quick Stats -->
+                    <div class="pt-8 border-t border-brand-gold/20 grid grid-cols-3 gap-4 max-w-lg mx-auto lg:mx-0 text-center lg:text-left">
+                        <div>
+                            <p class="font-serif text-2xl font-bold text-brand-green">12</p>
+                            <p class="text-xs text-brand-brown/70 font-medium">Super Ingredients</p>
+                        </div>
+                        <div>
+                            <p class="font-serif text-2xl font-bold text-brand-green">0%</p>
+                            <p class="text-xs text-brand-brown/70 font-medium">Added Preservatives</p>
+                        </div>
+                        <div>
+                            <p class="font-serif text-2xl font-bold text-brand-green">100%</p>
+                            <p class="text-xs text-brand-brown/70 font-medium">Freshly Made</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Visual Showcase -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Decorative Ring -->
+                        <div class="absolute -inset-4 rounded-full bg-gradient-to-tr from-brand-gold/30 to-brand-green/20 blur-2xl opacity-70"></div>
+                        
+                        <!-- Main Product Badge Card -->
+                        <div class="relative rounded-3xl p-6 bg-white border border-brand-gold/30 custom-shadow text-center space-y-6">
+                            <!-- Badge Header -->
+                            <div class="inline-block bg-brand-lightgold px-4 py-1 rounded-full text-brand-brown font-serif font-bold text-xs uppercase tracking-widest border border-brand-gold/40">
+                                Signature Recipe
+                            </div>
+
+                            <!-- Granola Bowl Illustration / Graphic Container -->
+                            <div class="relative w-64 h-64 mx-auto rounded-full bg-brand-lightgold/40 flex items-center justify-center p-4 border-4 border-dashed border-brand-gold/30">
+                                <div class="w-full h-full rounded-full bg-gradient-to-br from-brand-gold/20 to-brand-green/10 flex flex-col items-center justify-center p-6 text-center space-y-2">
+                                    <div class="w-16 h-16 rounded-full bg-brand-brown flex items-center justify-center text-brand-gold shadow-md">
+                                        <i data-lucide="soup" class="w-8 h-8"></i>
+                                    </div>
+                                    <h3 class="font-serif font-bold text-xl text-brand-brown">Nutty Granola</h3>
+                                    <span class="text-xs text-brand-green font-semibold bg-white/80 px-3 py-1 rounded-full">Rich in Fiber & Protein</span>
+                                </div>
+
+                                <!-- Floating Ingredient Icons -->
+                                <div class="absolute -top-2 left-4 bg-white p-2.5 rounded-2xl shadow-md border border-brand-gold/20 text-xs font-bold flex items-center gap-1.5">
+                                    <span>🥥</span> Coconut Flakes
+                                </div>
+                                <div class="absolute top-1/2 -right-4 bg-white p-2.5 rounded-2xl shadow-md border border-brand-gold/20 text-xs font-bold flex items-center gap-1.5">
+                                    <span>🍯</span> Honey & Nuts
+                                </div>
+                                <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-white p-2.5 rounded-2xl shadow-md border border-brand-gold/20 text-xs font-bold flex items-center gap-1.5">
+                                    <span>🌾</span> Rolled Oats
+                                </div>
+                            </div>
+
+                            <p class="text-xs text-brand-brown/80 italic">
+                                "Hand-selected nuts, roasted seeds, coconut flakes, and sun-dried fruit bits bound with natural honey in every crunchy bite."
+                            </p>
+
+                            <!-- Address pill -->
+                            <div class="pt-2 text-xs text-brand-brown/70 flex items-center justify-center gap-1">
+                                <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-green"></i>
+                                <span>Ago, Lagos, Nigeria</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="ingredients" class="py-20 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-xs font-bold tracking-widest text-brand-green uppercase bg-brand-lightgreen px-4 py-1.5 rounded-full border border-brand-green/20">What's Inside</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-brown">12 Wholesome Super Ingredients</h2>
+                <p class="text-brand-brown/70 text-base">
+                    Every bag of OVIA FOODS Nutty Granola is thoughtfully formulated with zero compromise on quality. Click any ingredient below to inspect its unique nutritional role.
+                </p>
+            </div>
+
+            <!-- Ingredient Filter / Category Tabs -->
+            <div class="flex flex-wrap justify-center gap-2 mb-10">
+                <button onclick="filterIngredients('all')" class="ing-filter active px-5 py-2 rounded-full text-xs font-bold bg-brand-brown text-white transition-all shadow-sm">All 12 Ingredients</button>
+                <button onclick="filterIngredients('base')" class="ing-filter px-5 py-2 rounded-full text-xs font-bold bg-brand-cream text-brand-brown hover:bg-brand-lightgold transition-all border border-brand-gold/30">Oats Base</button>
+                <button onclick="filterIngredients('nuts')" class="ing-filter px-5 py-2 rounded-full text-xs font-bold bg-brand-cream text-brand-brown hover:bg-brand-lightgold transition-all border border-brand-gold/30">Nuts & Flakes</button>
+                <button onclick="filterIngredients('seeds')" class="ing-filter px-5 py-2 rounded-full text-xs font-bold bg-brand-cream text-brand-brown hover:bg-brand-lightgold transition-all border border-brand-gold/30">Super Seeds</button>
+                <button onclick="filterIngredients('fruits')" class="ing-filter px-5 py-2 rounded-full text-xs font-bold bg-brand-cream text-brand-brown hover:bg-brand-lightgold transition-all border border-brand-gold/30">Fruits & Honey</button>
+            </div>
+
+            <!-- Ingredients Grid -->
+            <div id="ingredientsGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+                <!-- Dynamically Populated via JS -->
+            </div>
+
+            <!-- Detailed Selected Ingredient Spotlight Banner -->
+            <div id="ingredientSpotlight" class="mt-12 p-6 sm:p-8 rounded-3xl bg-brand-cream border border-brand-gold/40 shadow-sm flex flex-col md:flex-row items-center gap-6 transition-all duration-300">
+                <div class="w-20 h-20 rounded-2xl bg-white shadow-md flex items-center justify-center text-4xl shrink-0 border border-brand-gold/20" id="spotlightEmoji">
+                    🌾
+                </div>
+                <div class="space-y-2 text-center md:text-left flex-1">
+                    <div class="flex flex-wrap items-center justify-center md:justify-start gap-2">
+                        <h3 class="font-serif text-xl font-bold text-brand-brown" id="spotlightName">Rolled Oats</h3>
+                        <span class="text-xs px-2.5 py-0.5 rounded-full bg-brand-lightgreen text-brand-green font-semibold" id="spotlightTag">Hearty Base</span>
+                    </div>
+                    <p class="text-sm text-brand-brown/80" id="spotlightDesc">
+                        Slow-digesting whole grain providing steady, long-lasting energy throughout the day and promoting healthy heart function.
+                    </p>
+                </div>
+                <div class="shrink-0 bg-white px-5 py-3 rounded-2xl border border-brand-gold/20 text-center">
+                    <span class="text-xs text-brand-brown/60 uppercase tracking-wider block font-medium">Key Benefit</span>
+                    <span class="text-sm font-bold text-brand-green" id="spotlightBenefit">Beta-Glucan Fiber & Energy</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="benefits" class="py-20 grain-bg border-t border-b border-brand-gold/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
+                <span class="text-xs font-bold tracking-widest text-brand-brown/70 uppercase">Why OVIA FOODS?</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-brown">Crafted For Your Well-being</h2>
+                <p class="text-brand-brown/70 text-sm sm:text-base">
+                    Whether you eat it with cold milk, thick yoghurt, as a smoothie topper, or straight out of the pouch—here is why Nutty Granola is your body's favorite meal.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <div class="bg-white p-8 rounded-3xl border border-brand-gold/20 shadow-sm hover:shadow-md transition-shadow space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-brand-lightgreen text-brand-green flex items-center justify-center">
+                        <i data-lucide="heart-pulse" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-brand-brown">Heart Healthy</h3>
+                    <p class="text-sm text-brand-brown/75 leading-relaxed">
+                        Packed with healthy fats from almonds and cashews along with Omega-3 fatty acids from chia & flax seeds.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl border border-brand-gold/20 shadow-sm hover:shadow-md transition-shadow space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-brand-lightgold text-brand-brown flex items-center justify-center">
+                        <i data-lucide="zap" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-brand-brown">Sustained Energy</h3>
+                    <p class="text-sm text-brand-brown/75 leading-relaxed">
+                        Complex carbohydrates from rolled oats and natural sweetness from honey and dried fruits give zero energy crashes.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl border border-brand-gold/20 shadow-sm hover:shadow-md transition-shadow space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-red-50 text-brand-accentRed flex items-center justify-center">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-brand-brown">100% Pure & Clean</h3>
+                    <p class="text-sm text-brand-brown/75 leading-relaxed">
+                        No artificial flavors or synthetic preservatives. Just raw whole food nutrients roasted with pure honey.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl border border-brand-gold/20 shadow-sm hover:shadow-md transition-shadow space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-yellow-50 text-brand-accentYellow flex items-center justify-center">
+                        <i data-lucide="sparkle" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-brand-brown">Rich in Fiber</h3>
+                    <p class="text-sm text-brand-brown/75 leading-relaxed">
+                        Promotes excellent digestion and keeps you full for longer, helping with weight management and gut health.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section id="order" class="py-20 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Details -->
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-xs font-bold tracking-widest text-brand-green uppercase bg-brand-lightgreen px-4 py-1 rounded-full border border-brand-green/20">Instant WhatsApp Order</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-brown leading-tight">
+                        Get Fresh Nutty Granola Delivered To Your Doorstep
+                    </h2>
+                    <p class="text-brand-brown/80 text-base leading-relaxed">
+                        Select your preferred pouch size, customize quantity, and send your direct order request to OVIA FOODS via WhatsApp with a single tap.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-brand-lightgold flex items-center justify-center shrink-0 text-brand-brown font-bold text-sm">1</div>
+                            <div>
+                                <h4 class="font-bold text-brand-brown text-sm">Choose Your Pack Size</h4>
+                                <p class="text-xs text-brand-brown/70">Select from 250g personal pouch to 1kg family pack.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-brand-lightgold flex items-center justify-center shrink-0 text-brand-brown font-bold text-sm">2</div>
+                            <div>
+                                <h4 class="font-bold text-brand-brown text-sm">Confirm Quantity</h4>
+                                <p class="text-xs text-brand-brown/70">Adjust how many packs you want for your pantry.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-brand-lightgold flex items-center justify-center shrink-0 text-brand-brown font-bold text-sm">3</div>
+                            <div>
+                                <h4 class="font-bold text-brand-brown text-sm">Instant Delivery Arrangement</h4>
+                                <p class="text-xs text-brand-brown/70">Fast order confirmation & delivery across Lagos and beyond.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Interactive Calculator Card -->
+                <div class="lg:col-span-7">
+                    <div class="bg-brand-cream p-6 sm:p-10 rounded-3xl border border-brand-gold/30 custom-shadow space-y-8">
+                        
+                        <div class="flex items-center justify-between border-b border-brand-gold/20 pb-4">
+                            <div>
+                                <h3 class="font-serif font-bold text-2xl text-brand-brown">Order Configurator</h3>
+                                <p class="text-xs text-brand-brown/70">OVIA FOODS • Nutty Granola</p>
+                            </div>
+                            <span class="text-xs font-semibold px-3 py-1 bg-brand-lightgreen text-brand-green rounded-full">In Stock</span>
+                        </div>
+
+                        <!-- Pack Size Selection -->
+                        <div class="space-y-3">
+                            <label class="block text-xs font-bold text-brand-brown uppercase tracking-wider">Select Pouch Size</label>
+                            <div class="grid grid-cols-3 gap-3" id="sizeSelector">
+                                <button type="button" onclick="selectSize('250g', 2500)" class="size-btn active p-4 rounded-2xl border-2 border-brand-green bg-white text-center transition-all">
+                                    <span class="block font-bold text-sm text-brand-brown">250g</span>
+                                    <span class="text-xs text-brand-brown/60">Mini Snack Pack</span>
+                                </button>
+                                <button type="button" onclick="selectSize('500g', 4800)" class="size-btn p-4 rounded-2xl border-2 border-brand-gold/30 bg-white text-center hover:border-brand-gold transition-all">
+                                    <span class="block font-bold text-sm text-brand-brown">500g</span>
+                                    <span class="text-xs text-brand-brown/60">Standard Pack</span>
+                                </button>
+                                <button type="button" onclick="selectSize('1kg', 9000)" class="size-btn p-4 rounded-2xl border-2 border-brand-gold/30 bg-white text-center hover:border-brand-gold transition-all">
+                                    <span class="block font-bold text-sm text-brand-brown">1kg</span>
+                                    <span class="text-xs text-brand-brown/60">Family Mega Pack</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Quantity Selector -->
+                        <div class="space-y-3">
+                            <label class="block text-xs font-bold text-brand-brown uppercase tracking-wider">Quantity</label>
+                            <div class="flex items-center gap-4 bg-white p-2 rounded-2xl border border-brand-gold/30 w-fit">
+                                <button onclick="updateQty(-1)" class="w-10 h-10 rounded-xl bg-brand-cream hover:bg-brand-lightgold text-brand-brown font-bold flex items-center justify-center text-lg">-</button>
+                                <span id="qtyDisplay" class="font-bold text-lg text-brand-brown w-12 text-center">1</span>
+                                <button onclick="updateQty(1)" class="w-10 h-10 rounded-xl bg-brand-cream hover:bg-brand-lightgold text-brand-brown font-bold flex items-center justify-center text-lg">+</button>
+                            </div>
+                        </div>
+
+                        <!-- Optional Delivery Notes -->
+                        <div class="space-y-2">
+                            <label class="block text-xs font-bold text-brand-brown uppercase tracking-wider">Delivery Area / Notes (Optional)</label>
+                            <input type="text" id="deliveryNotes" placeholder="e.g. Park View Estate, Lekki, Victoria Island, etc." class="w-full px-4 py-3 rounded-xl border border-brand-gold/30 focus:outline-none focus:border-brand-green bg-white text-sm">
+                        </div>
+
+                        <!-- Order Summary -->
+                        <div class="bg-white p-5 rounded-2xl border border-brand-gold/20 flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-brand-brown/60 uppercase font-semibold block">Total Estimate</span>
+                                <span class="font-serif font-bold text-2xl text-brand-green" id="totalPrice">₦2,500</span>
+                            </div>
+                            <span class="text-xs text-brand-brown/70 bg-brand-lightgold px-3 py-1 rounded-full font-medium" id="summaryText">1 x 250g Pouch</span>
+                        </div>
+
+                        <!-- Action Button -->
+                        <button onclick="sendWhatsAppOrder()" class="w-full py-4 rounded-2xl bg-brand-green text-white font-bold text-base hover:bg-brand-brown transition-all shadow-lg flex items-center justify-center gap-3">
+                            <i data-lucide="message-circle" class="w-5 h-5 fill-current"></i>
+                            <span>Send Order to WhatsApp (09068925822)</span>
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-brand-darkbrown text-brand-cream pt-16 pb-12 border-t border-brand-gold/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+                
+                <!-- Brand Info -->
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-brand-green flex items-center justify-center text-brand-cream shadow-md">
+                            <i data-lucide="leaf" class="w-5 h-5 text-brand-gold"></i>
+                        </div>
+                        <span class="font-serif text-2xl font-bold tracking-tight text-white">OVIA FOODS</span>
+                    </div>
+                    <p class="text-brand-cream/70 text-sm leading-relaxed max-w-sm">
+                        Dedicated to serving wholesome, natural, and nutrient-rich food products. Our Nutty Granola is handcrafted with love and care in Lagos, Nigeria.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="lg:col-span-3 space-y-3">
+                    <h4 class="font-serif font-bold text-white text-base">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-brand-cream/70">
+                        <li><a href="#home" class="hover:text-brand-gold transition-colors">Home Page</a></li>
+                        <li><a href="#ingredients" class="hover:text-brand-gold transition-colors">12 Ingredients Breakdown</a></li>
+                        <li><a href="#benefits" class="hover:text-brand-gold transition-colors">Nutritional Benefits</a></li>
+                        <li><a href="#order" class="hover:text-brand-gold transition-colors">Order Granola Packs</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Details -->
+                <div class="lg:col-span-4 space-y-3">
+                    <h4 class="font-serif font-bold text-white text-base">Contact & Location</h4>
+                    <div class="space-y-3 text-sm text-brand-cream/80">
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-brand-gold shrink-0 mt-0.5"></i>
+                            <span>4 Oyindamola Shogbesan Park View Estate, Ago, Lagos, Nigeria</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-brand-gold shrink-0"></i>
+                            <a href="tel:09068925822" class="hover:text-brand-gold font-semibold">09068925822</a>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="message-square" class="w-5 h-5 text-brand-gold shrink-0"></i>
+                            <a href="https://wa.me/2349068925822" target="_blank" class="hover:text-brand-gold">WhatsApp: +234 906 892 5822</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Copyright -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-brand-cream/50 gap-4">
+                <p>&copy; <span id="currentYear"></span> OVIA FOODS. All Rights Reserved.</p>
+                <p class="italic">Nutty Granola • 100% Wholesome Goodness</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set dynamic copyright year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // 12 Ingredients Dataset
+        const ingredientsData = [
+            { id: 'oats', name: 'Rolled Oats', category: 'base', emoji: '🌾', benefit: 'Hearty Fibre Base', desc: 'Provides slow-release energy, rich in beta-glucan fiber for digestive and heart health.' },
+            { id: 'cashew', name: 'Cashew Nut', category: 'nuts', emoji: '🥜', benefit: 'Creamy Healthy Fats', desc: 'Loaded with plant protein, magnesium, and healthy monounsaturated fats.' },
+            { id: 'almond', name: 'Almond Nut', category: 'nuts', emoji: '🌰', benefit: 'Vitamin E Powerhouse', desc: 'Adds satisfying crunch while boosting brain function and antioxidant levels.' },
+            { id: 'coconut', name: 'Coconut Flakes', category: 'nuts', emoji: '🥥', benefit: 'Tropical Richness', desc: 'Provides healthy MCTs and a delightful tropical texture and natural aroma.' },
+            { id: 'honey', name: 'Honey', category: 'fruits', emoji: '🍯', benefit: 'Natural Sweet Binder', desc: 'Pure golden nectar used to gently roast and bind our clusters with wholesome sweetness.' },
+            { id: 'pumpkin', name: 'Pumpkin Seed', category: 'seeds', emoji: '🎃', benefit: 'Zinc & Immune Boost', desc: 'Rich source of zinc, iron, and tryptophan for sound sleep and immunity.' },
+            { id: 'chia', name: 'Chia Seed', category: 'seeds', emoji: '🌱', benefit: 'Omega-3 Superfood', desc: 'Packed with fiber, calcium, and essential fatty acids that promote cell health.' },
+            { id: 'flax', name: 'Flax Seed', category: 'seeds', emoji: '🌾', benefit: 'Lignans & Digestion', desc: 'Excellent source of dietary fiber and ALA omega-3s for smooth digestion.' },
+            { id: 'sunflower', name: 'Sunflower Seed', category: 'seeds', emoji: '🌻', benefit: 'Antioxidant Rich', desc: 'Delivers vitamin E, selenium, and copper to protect body cells from oxidative stress.' },
+            { id: 'banana', name: 'Banana Slices', category: 'fruits', emoji: '🍌', benefit: 'Potassium & Sweetness', desc: 'Naturally sweet flavor coupled with essential potassium and quick energy.' },
+            { id: 'raisin', name: 'Dried Raisins', category: 'fruits', emoji: '🍇', benefit: 'Chewy Quick Energy', desc: 'Naturally sun-dried fruit bits delivering natural sweetness and iron.' },
+            { id: 'strawberry', name: 'Dried Strawberries', category: 'fruits', emoji: '🍓', benefit: 'Tangy Vitamin C', desc: 'Tangy burst of antioxidants and vitamin C for immune system vibrancy.' }
+        ];
+
+        // Render Ingredients Grid
+        function renderIngredients(filter = 'all') {
+            const grid = document.getElementById('ingredientsGrid');
+            grid.innerHTML = '';
+
+            const filtered = filter === 'all' 
+                ? ingredientsData 
+                : ingredientsData.filter(item => item.category === filter);
+
+            filtered.forEach(item => {
+                const card = document.createElement('div');
+                card.className = `p-5 rounded-2xl bg-brand-cream border border-brand-gold/30 hover:border-brand-green hover:shadow-md cursor-pointer transition-all flex flex-col items-center text-center group`;
+                card.onclick = () => selectIngredient(item);
+
+                card.innerHTML = `
+                    <div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-3xl mb-3 shadow-sm group-hover:scale-110 transition-transform">
+                        ${item.emoji}
+                    </div>
+                    <h4 class="font-serif font-bold text-sm text-brand-brown">${item.name}</h4>
+                    <span class="text-[11px] text-brand-green font-medium mt-1">${item.benefit}</span>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Handle Ingredient Spotlight Click
+        function selectIngredient(item) {
+            document.getElementById('spotlightEmoji').textContent = item.emoji;
+            document.getElementById('spotlightName').textContent = item.name;
+            document.getElementById('spotlightTag').textContent = item.category.toUpperCase();
+            document.getElementById('spotlightDesc').textContent = item.desc;
+            document.getElementById('spotlightBenefit').textContent = item.benefit;
+
+            // Scroll spotlight into view smoothly if on mobile
+            if (window.innerWidth < 768) {
+                document.getElementById('ingredientSpotlight').scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Filter button styles and function
+        function filterIngredients(category) {
+            const buttons = document.querySelectorAll('.ing-filter');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-brand-brown', 'text-white');
+                btn.classList.add('bg-brand-cream', 'text-brand-brown');
+            });
+            event.target.classList.remove('bg-brand-cream', 'text-brand-brown');
+            event.target.classList.add('bg-brand-brown', 'text-white');
+
+            renderIngredients(category);
+        }
+
+        // Calculator State
+        let currentSize = '250g';
+        let currentUnitPrice = 2500;
+        let currentQty = 1;
+
+        function selectSize(size, price) {
+            currentSize = size;
+            currentUnitPrice = price;
+
+            // Update UI buttons
+            const buttons = document.querySelectorAll('#sizeSelector .size-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('border-brand-green', 'border-2');
+                btn.classList.add('border-brand-gold/30');
+            });
+            event.currentTarget.classList.remove('border-brand-gold/30');
+            event.currentTarget.classList.add('border-brand-green', 'border-2');
+
+            updateSummary();
+        }
+
+        function updateQty(change) {
+            currentQty += change;
+            if (currentQty < 1) currentQty = 1;
+            document.getElementById('qtyDisplay').textContent = currentQty;
+            updateSummary();
+        }
+
+        function updateSummary() {
+            const total = currentUnitPrice * currentQty;
+            document.getElementById('totalPrice').textContent = `₦${total.toLocaleString()}`;
+            document.getElementById('summaryText').textContent = `${currentQty} x ${currentSize} Pouch`;
+        }
+
+        // Send Order to WhatsApp
+        function sendWhatsAppOrder() {
+            const notes = document.getElementById('deliveryNotes').value.trim();
+            const total = (currentUnitPrice * currentQty).toLocaleString();
+
+            let message = `Hello *OVIA FOODS*! 👋%0A%0A` +
+                `I would like to place an order for *Nutty Granola*:%0A` +
+                `• *Pack Size:* ${currentSize}%0A` +
+                `• *Quantity:* ${currentQty}%0A` +
+                `• *Estimated Total:* ₦${total}%0A`;
+
+            if (notes) {
+                message += `• *Delivery Notes/Location:* ${encodeURIComponent(notes)}%0A`;
+            }
+
+            message += `%0APlease confirm my order availability and delivery details. Thank you!`;
+
+            const whatsappUrl = `https://wa.me/2349068925822?text=${message}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Initialize Lucide Icons & Default View
+        window.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+            renderIngredients('all');
+            selectIngredient(ingredientsData[0]); // Default to rolled oats spotlight
+        });
+    </script>
+</body>
+</html>
